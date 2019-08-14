@@ -36,6 +36,8 @@ if($('product_status') != null)
 		document.getElementById("product_status").value= <?php echo $product_status ?>;
 	<?php endif; ?>
 	$('product_status').up().up().hide();
+	$('admin_product_commission').setStyle({background: 'none',border: 'none'});
+	Form.Element.disable('admin_product_commission');
 	}
 <?php endif; ?>
 <?php if(!Mage::getStoreConfig('carriers/marketplaceproductshipping/active') || ($type == 'virtual' || $type == 'downloadable')  ): ?>
