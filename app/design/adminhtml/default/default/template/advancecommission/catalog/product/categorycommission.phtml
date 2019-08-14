@@ -1,0 +1,36 @@
+<div id="customer_info_tabs_customer_edit_tab_action_content">
+	<div class="entry-edit">
+		<div class="entry-edit-head">
+			<h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Category Commission in(%)'); ?></h4>
+		</div>
+		<div id="group_fields4" class="fieldset fieldset-wide">
+			<div class="hor-scroll">
+	<?php $category = Mage::getModel('catalog/category');
+		$tree = $category->getTreeModel();
+		$tree->load();
+		$ids = $tree->getCollection()->getAllIds();
+		$base_path = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS);
+		$folder_path = $base_path ."extjs". DS ."resources". DS . "images" . DS . "magento" . DS . "tree" . DS . "folder.gif";
+    if ($ids) {
+		 echo "<ul>";
+        foreach ($ids as $id) {
+            $cat = Mage::getModel('catalog/category');
+            $cat->load($id);
+			$cat_id_hidden = array('1','2');//set category id hidden
+                    if(in_array($id,$cat_id_hidden)){
+                        continue;
+                    }
+				$commission = "not set commission";
+				if($cat->getAdminCategoryCommission())
+					$commission = $cat->getAdminCategoryCommission();
+				
+             echo "<li><img src={$folder_path} class='x-tree-node-icon' unselectable='on' id='ext-gen19'>
+			 <span><a href='#'>".$cat->getName()."</a>-(". $commission."%)</span></li>";
+        }
+		 echo "<ul>";
+    }
+?>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+<config>
+    <modules>
+        <Manthan_Advancecommission>
+            <active>true</active>
+            <codePool>community</codePool>
+			<depends>
+				<Manthan_Marketplace/>
+			</depends>
+        </Manthan_Advancecommission>
+    </modules>
+</config>

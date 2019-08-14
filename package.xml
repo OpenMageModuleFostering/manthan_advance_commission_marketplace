@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Manthan_Advance_Commission_Marketplace</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Admin can be set commission on products or categories with the help of this extension.</summary>
+    <description>Admin can be set commission on products or categories with the help of this extension.Highest priority will be product.Both are not set it will get default commission value from seller profile.</description>
+    <notes>This is a first release.</notes>
+    <authors><author><name>Manthan Soni</name><user>Manthan</user><email>sonimanthan0@gmail.com</email></author></authors>
+    <date>2016-02-12</date>
+    <time>19:18:46</time>
+    <contents><target name="magecommunity"><dir name="Manthan"><dir name="Advancecommission"><dir name="Block"><dir name="Adminhtml"><dir name="Catalog"><dir name="Product"><file name="Categorycommission.php" hash="1eaf3fc86c38a3582a44427c8fa3b003"/></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="cadba54631d1154b51e79814f83a8387"/></dir><dir name="Model"><file name="Observer.php" hash="ce74f3326433a5fbdabec0c88775642a"/></dir><dir name="etc"><file name="config.xml" hash="fe1cf61b70a364ad182ed03a068ca68c"/><file name="system.xml" hash="69dc2be75e4a72a5cb5d5ec8b2fbd83a"/></dir><dir name="sql"><dir name="advancecommission_setup"><file name="mysql4-install-1.0.0.php" hash="dac8cfea66371b94d72145671c64a7b2"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Manthan_Advancecommission.xml" hash="8088f042681134446a8bb0377d7d843d"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="advancecommission.xml" hash="942bd39ba25d1c3f1059e05b54724423"/></dir><dir name="template"><dir name="advancecommission"><dir name="catalog"><dir name="product"><file name="categorycommission.phtml" hash="ce068f61d4eac58152fdf1366f8fcdf7"/><file name="edit.phtml" hash="183963b7b9e6dc3411cf24685cef843b"/></dir></dir></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.4.0</min><max>5.6.0</max></php><package><name>Manthan_Marketplace</name><channel>community</channel><min>1.7</min><max>1.9.2</max></package></required></dependencies>
+</package>

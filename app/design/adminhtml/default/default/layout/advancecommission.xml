@@ -1,0 +1,29 @@
+<layout>
+	<adminhtml_catalog_product_new>
+	<reference name="product_tabs">
+			<action method="addTab">
+				<name>my_custom_tab</name>
+				<block>advancecommission/adminhtml_catalog_product_categorycommission</block>
+			</action>
+		</reference>
+        <reference name="product_edit">
+            <action method="setTemplate">
+                <template>advancecommission/catalog/product/edit.phtml</template>
+            </action> 
+        </reference>
+		
+    </adminhtml_catalog_product_new>
+    <adminhtml_catalog_product_edit>
+		<reference name="product_tabs">
+			<action method="addTab">
+				<name>my_custom_tab</name>
+				<block>advancecommission/adminhtml_catalog_product_categorycommission</block>
+			</action>
+		</reference>
+        <reference name="product_edit">
+            <action method="setTemplate">
+                <template>advancecommission/catalog/product/edit.phtml</template>
+            </action>
+        </reference>
+    </adminhtml_catalog_product_edit>
+</layout>
